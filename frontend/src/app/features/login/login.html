@@ -1,37 +1,33 @@
-<h2>Login</h2>
+<section class="auth-card">
+  <h2>Login</h2>
 
-<form (ngSubmit)="login()">
+  <form (ngSubmit)="login()">
+    <div>
+      <label for="email">E-mail</label>
 
-  <div>
-    <label>Email</label><br>
-    <input
-      type="email"
-      name="email"
-      [(ngModel)]="email"
-      required>
-  </div>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        [(ngModel)]="email"
+        required
+      >
+    </div>
 
-  <br>
+    <div>
+      <label for="senha">Senha</label>
 
-  <div>
-    <label>Senha</label><br>
-    <input
-      type="password"
-      name="senha"
-      [(ngModel)]="senha"
-      required>
-  </div>
+      <input
+        id="senha"
+        type="password"
+        name="senha"
+        [(ngModel)]="senha"
+        required
+      >
+    </div>
 
-  <br>
+    <button type="submit">Entrar</button>
+  </form>
 
-  <button type="submit">
-    Entrar
-  </button>
-
-</form>
-
-<br>
-
-<a routerLink="/register">
-  Criar uma conta
-</a>
+  <a routerLink="/register">Criar uma conta</a>
+</section>
